@@ -1,4 +1,4 @@
-const CACHE='caminhos-v3-titulos';
+const CACHE='caminhos-v4-seis-cartas';
 const ASSETS=['./','./index.html','./styles.css','./content.js','./app.js','./journey.js','./trilha-temas.png','./manifest.webmanifest','./icon.svg','./ilustracoes.png'];
 self.addEventListener('install',event=>{event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(ASSETS)));self.skipWaiting();});
 self.addEventListener('activate',event=>event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(key=>key.startsWith('caminhos-')&&key!==CACHE).map(key=>caches.delete(key)))).then(()=>self.clients.claim())));

@@ -4,7 +4,7 @@ Ambiente de baralhos ilustrados para uso conduzido por psicólogo, com 10 temas 
 
 ## Usar
 
-Escolha um dos dez quadrantes temáticos da trilha, ou selecione o tema pelo nome na lista abaixo. O tema abre sua mesa de cartas em modo apresentação. O psicólogo pode voltar ao próprio modo para ajustar os filtros. A pessoa escolhe uma entre até três cartas fechadas. A carta abre uma imagem e uma pergunta; é possível trocar de carta a qualquer momento. No modo do psicólogo há indicações de processos da ACT e perguntas de aprofundamento.
+Escolha um dos dez quadrantes temáticos da trilha, ou selecione o tema pelo nome na lista abaixo. O tema abre sua mesa de cartas em modo apresentação. O psicólogo pode voltar ao próprio modo para ajustar os filtros. A pessoa escolhe uma entre até seis cartas fechadas. A carta abre uma imagem e uma pergunta; é possível trocar de carta a qualquer momento. No modo do psicólogo há indicações de processos da ACT e perguntas de aprofundamento.
 
 O site não exige login. Não há campos para nome, prontuário ou respostas do paciente. Os identificadores das cartas favoritas ficam no navegador; as cartas vistas ficam apenas na memória da sessão aberta. O GitHub Pages possui suas próprias condições de hospedagem.
 
