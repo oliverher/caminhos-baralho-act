@@ -17,7 +17,7 @@ Site estático, sem instalação de dependências ou build. Em Settings → Page
 - `index.html`: estrutura e telas.
 - `styles.css`: identidade visual e layouts responsivos.
 - `content.js`: temas, perguntas, processos e aprofundamentos.
-- `trilha-temas-livre.png` e `journey.js`: tabuleiro ilustrado e áreas temáticas clicáveis, com suporte a teclado.
+- `trilha-paisagem.png` e `journey.js`: tabuleiro ilustrado e áreas temáticas clicáveis, com suporte a teclado.
 - `app.js`: seleção, filtros, apresentação e favoritos.
 - `ilustracoes.png`: prancha conceitual original, exibida por recortes em CSS.
 - `sw.js` e `manifest.webmanifest`: base para uso instalável e cache local após o primeiro carregamento bem-sucedido.
