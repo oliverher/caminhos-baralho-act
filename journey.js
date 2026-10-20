@@ -15,11 +15,14 @@ function renderJourney(){
  const svg=$('journey-hotspots');
  svg.innerHTML=JOURNEY_TILES.map(tile=>{
   const deck=deckById(tile.deck);
-  return `<g class="journey-tile" role="button" tabindex="0" data-journey-deck="${deck.id}" aria-label="Escolher tema ${escapeHtml(deck.short)} e abrir suas cartas"><title>${escapeHtml(deck.short)} — ${escapeHtml(deck.description)}</title><polygon points="${tile.points}"/><g class="tile-label" aria-hidden="true"><rect x="${tile.x-tile.width/2}" y="${tile.y-23}" width="${tile.width}" height="39" rx="19"/><text x="${tile.x}" y="${tile.y+3}" text-anchor="middle">${escapeHtml(tile.label)}</text></g></g>`;
+  return `<g class="journey-tile" role="button" tabindex="0" data-journey-deck="${deck.id}" aria-label="Escolher tema ${escapeHtml(deck.short)} e abrir suas cartas"><polygon points="${tile.points}"/></g>`;
  }).join('');
+ $('journey-theme-nav').innerHTML=JOURNEY_TILES.map(tile=>`<button type="button" data-theme-name="${tile.deck}">${escapeHtml(tile.label)}</button>`).join('');
+ $('journey-theme-nav').addEventListener('click',event=>{const button=event.target.closest('[data-theme-name]');if(button)startDeck(button.dataset.themeName);});
+ const heading=$('board-topic-title');
  const caption=$('board-caption');
- const describe=event=>{const target=event.target.closest('[data-journey-deck]');if(target){const deck=deckById(target.dataset.journeyDeck);caption.textContent=deck.short+' · '+deck.description;}};
- const resetCaption=()=>{caption.textContent='Você pode começar por qualquer tema. Não precisa seguir a ordem da trilha.';};
+ const describe=event=>{const target=event.target.closest('[data-journey-deck]');if(target){const deck=deckById(target.dataset.journeyDeck);heading.textContent=deck.short;caption.textContent=deck.description;}};
+ const resetCaption=()=>{heading.textContent='Escolha um tema na trilha';caption.textContent='Você pode começar por qualquer tema. Não precisa seguir a ordem da trilha.';};
  svg.addEventListener('pointerover',describe);svg.addEventListener('focusin',describe);svg.addEventListener('pointerleave',resetCaption);svg.addEventListener('focusout',resetCaption);
  const open=target=>{const id=target.dataset.journeyDeck;startDeck(id);$('session-title').setAttribute('tabindex','-1');$('session-title').focus({preventScroll:true});};
  svg.addEventListener('click',event=>{const tile=event.target.closest('[data-journey-deck]');if(tile)open(tile);});
